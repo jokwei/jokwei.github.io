@@ -78,10 +78,10 @@
       <div class="outer">
         <section id="main">
   
-    <article id="post-New-Test-Post" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+    <article id="post-md-grammar-reference" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
-    <a href="/2021/08/04/New-Test-Post/" class="article-date">
-  <time class="dt-published" datetime="2021-08-04T12:55:27.000Z" itemprop="datePublished">2021-08-04</time>
+    <a href="/2021/08/11/md-grammar-reference/" class="article-date">
+  <time class="dt-published" datetime="2021-08-11T07:21:50.000Z" itemprop="datePublished">2021-08-11</time>
 </a>
     
   </div>
@@ -92,7 +92,7 @@
         
   
     <h1 itemprop="name">
-      <a class="p-name article-title" href="/2021/08/04/New-Test-Post/">New Test Post</a>
+      <a class="p-name article-title" href="/2021/08/11/md-grammar-reference/">md-grammar-reference</a>
     </h1>
   
 
@@ -100,14 +100,502 @@
     
     <div class="e-content article-entry" itemprop="articleBody">
       
-        
+        <table>
+            <thead>
+            <tr>
+                <th>格式</th>
+                <th>Markdown</th>
+                <th>HTML</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td colspan="1" rowspan="5">
+                    <p>标题</p>
+                </td>
+                <td colspan="1" rowspan="1">
+                    <p>#标题 1</p>
+                </td>
+                <td colspan="1" rowspan="2">
+                    <p>&lt;h1&gt;标题 1&lt;/h1&gt;</p>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="1" rowspan="1">
+                    <p>标题 1<br>
+                        -------------</p>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="1" rowspan="1">
+                    <p>## 标题 2</p>
+                </td>
+                <td colspan="1" rowspan="2">
+                    <p>&lt;h2&gt;标题 2&lt;/h2&gt;</p>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="1" rowspan="1">
+                    <p>标题 2<br>
+                        --------------</p>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="1" rowspan="1">
+                    <p>### 标题 3<br>
+                        #### 标题 4<br>
+                        ##### 标题 5<br>
+                        ###### 标题 6</p>
+                </td>
+                <td colspan="1" rowspan="1"><p>&lt;h3&gt;标题 3&lt;/h3&gt;<br>
+                    &lt;h4&gt;标题 4&lt;/h4&gt;<br>
+                    &lt;h5&gt;标题 5&lt;/h5&gt;<br>
+                    &lt;h6&gt;标题 6&lt;/h6&gt;</p></td>
+            </tr>
+            <tr>
+                <td colspan="1" rowspan="1">
+                    <p>段落数</p>
+                </td>
+                <td colspan="1" rowspan="1">
+                    <p>段落用空白行分隔。</p>
+                    <p>这是另一段。</p>
+                </td>
+                <td colspan="1" rowspan="1">
+                    <p>&lt;p&gt;段落用空白行分隔&lt;/p&gt;<br>
+                        &lt;p&gt;这是另一段。&lt;/p&gt;</p>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="1" rowspan="1">
+                    <p>换行符</p>
+                </td>
+                <td colspan="1" rowspan="1">
+                    <p>一行末尾的两个空格</p>
+                    <p>插入换行符。</p>
+                </td>
+                <td colspan="1" rowspan="1">
+                    <p>一行末尾的两个空格 &nbsp;&lt;br&gt;<br>
+                        插入换行符。</p>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="1" rowspan="5">
+                    <p>字体</p>
+                </td>
+                <td colspan="1" rowspan="1"><p>**<strong>粗体</strong>**</p>          <p>__粗体__</p>
+                </td>
+                <td colspan="1" rowspan="1">
+                    <p>&lt;strong&gt;粗体&lt;/strong&gt;</p>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="1" rowspan="1"><p>*<em>斜体</em>*</p>
+                    <p>_<em>斜体</em>_</p></td>
+                <td colspan="1" rowspan="1">
+                    <p>&lt;em&gt;斜体&lt;/em&gt;</p>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="1" rowspan="1"><p>**_<strong><em>粗体和斜体</em></strong>_**</p></td>
+                <td ccolspan="1" rowspan="1">
+                    <p>&lt;strong&gt;&lt;em&gt;粗体和斜体&lt;/em&gt;&lt;/strong&gt;</p>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="1" rowspan="1">
+                    <p>“<code translate="no" dir="ltr">monospace</code>”</p>
+                </td>
+                <td colspan="1" rowspan="1">
+                    <p>&lt;code&gt;等宽&lt;/code&gt;</p>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="1" rowspan="1">
+                    <p>~~<s>删除线</s>~~</p>
+                </td>
+                <td colspan="1" rowspan="1">
+                    <p>&lt;s&gt;删除线&lt;/s&gt;</p>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="1" rowspan="1">
+                    <p>链接</p>
+                </td>
+                <td colspan="1" rowspan="1">
+                    <p>[链接文本](http://www.example.com)<br>
+                    [链接文本](/directory/page)<br>
+                    [链接文本](page#anchor) - 链接到同一页面中的锚标记</p>
+                </td>
+                <td colspan="1" rowspan="1">
+                    <p>&lt;a href="http://www.example.com"&gt;链接文本&lt;/a&gt;<br>
+                      &lt;a href="/directory/page"&gt;链接文本&lt;/a&gt;<br>
+                    &lt;a href="page#anchor"&gt;链接文本&lt;/a&gt; - 链接到同一页面中的锚标记</p>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="1" rowspan="1">
+                    <p>图片</p>
+                </td>
+                <td colspan="1" rowspan="1">
+                    <p>![Alt-text](http://www.mycompany.com/image.png)</p>
+                </td>
+                <td colspan="1" rowspan="1">
+                    <p>&lt;img src="http://www.mycompany.com/image.png" alt="Alt-text"&gt;</p>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="1" rowspan="1">
+                    <p>水平规则</p>
+                </td>
+                <td colspan="1" rowspan="1">
+                    <p>---</p>
+                </td>
+                <td colspan="1" rowspan="1">
+                    <p>&lt;hr /&gt;</p>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="1" rowspan="1">
+                    <p>有序列表</p>
+                </td>
+                <td colspan="1" rowspan="1">
+                    <p>1.&nbsp;项 1<br>
+                        2.&nbsp;项 2<br>
+                        3.&nbsp;项 3</p>
+                    <p>1.&nbsp;项 1<br>
+                        1.&nbsp;项 2<br>
+                        1.&nbsp;项 3</p>
+                    <p>1.&nbsp;项 1<br>
+                        8.&nbsp;项 2<br>
+                        6.&nbsp;项 3</p>
+                </td>
+                <td colspan="1" rowspan="1">
+                    <p>&lt;ol&gt;<br>
+                        &lt;li&gt;项 1&lt;/li&gt;<br>
+                        &lt;li&gt;项 2&lt;/li&gt;<br>
+                        &lt;li&gt;项 3&lt;/li&gt;<br>
+                        &lt;/ol&gt;</p>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="1" rowspan="1">
+                    <p>无序列表</p>
+                </td>
+                <td colspan="1" rowspan="1">
+                    <p>* 项<br>
+                        * 项<br>
+                        * 项</p>
+                    <p>+ 项<br>
+                        + 项<br>
+                        + 项</p>
+                    <p>- 项<br>
+                        - 项<br>
+                        - 项</p>
+                </td>
+                <td colspan="1" rowspan="1"><p>&lt;ul&gt;<br>
+                    &lt;li&gt;项&lt;/li&gt;<br>
+                    &lt;li&gt;项&lt;/li&gt;<br>
+                    &lt;li&gt;项&lt;/li&gt;<br>
+                    &lt;/ul&gt;</p></td>
+            </tr>
+            <tr>
+                <td colspan="1" rowspan="1">
+                    <p>表</p>
+                </td>
+                <td colspan="1" rowspan="1">
+                    <p>| 列 1 | 列 2 | 列 3 |<br>
+                        | --------------| ------------ | ------------- |<br>
+                        | 行 1-1 &nbsp; | 行 1-2 &nbsp; | 行 1-3 &nbsp; |<br>
+                        | 行 2-1 &nbsp; | 行 2-2 &nbsp; | 行 2-3 &nbsp; |</p>
+                </td>
+                <td colspan="1" rowspan="1"><p>&lt;table&gt;<br>
+                    &nbsp;&lt;tr&gt;<br>
+                    &nbsp; &nbsp; &lt;th&gt;列 1&lt;/th&gt;<br>
+                    &nbsp; &nbsp; &lt;th&gt;列 2&lt;/th&gt;<br>
+                    &nbsp; &nbsp; &lt;th&gt;列 3&lt;/th&gt;<br>
+                    &nbsp;&lt;/tr&gt;<br>
+                    &nbsp;&lt;tr&gt;<br>
+                    &nbsp; &nbsp;&lt;td&gt;行 1-1&lt;/td&gt;<br>
+                    &nbsp; &nbsp; &nbsp;&lt;td&gt;行 1-2&lt;/td&gt;<br>
+                    &nbsp; &nbsp; &nbsp;&lt;td&gt;行 1-3&lt;/td&gt;<br>
+                    &nbsp; &lt;/tr&gt;<br>
+                    &nbsp; &lt;tr&gt;<br>
+                    &nbsp; &nbsp; &nbsp;&lt;td&gt;行 2-1&lt;/td&gt;<br>
+                    &nbsp; &nbsp; &nbsp;&lt;td&gt;行 2-2&lt;/td&gt;<br>
+                    &nbsp; &nbsp; &nbsp;&lt;td&gt;行 2-3&lt;/td&gt;<br>
+                    &nbsp; &lt;/tr&gt;<br>
+                    &lt;/table&gt;</p></td>
+            </tr>
+            <tr>
+                <td colspan="1" rowspan="1">
+                    <p>预格式化文本块</p>
+                </td>
+                <td colspan="1" rowspan="1">
+                    <p>'''<br>
+            </p><devsite-code no-copy="" data-copy-event-label=""><div class="devsite-code-buttons-container" role="group" aria-label="操作按钮"><button type="button" class="gc-analytics-event material-icons devsite-icon-code-dark devsite-toggle-dark" data-category="Site-Wide Custom Events" data-label="Dark Code Toggle" track-type="exampleCode" track-name="darkCodeToggle" aria-label="深色代码主题背景" data-title="深色代码主题背景"></button><button type="button" class="gc-analytics-event material-icons devsite-icon-code-light devsite-toggle-light" data-category="Site-Wide Custom Events" data-label="Light Code Toggle" track-type="exampleCode" track-name="lightCodeToggle" aria-label="浅色代码主题背景" data-title="浅色代码主题背景"></button></div><pre translate="no" dir="ltr" is-upgraded="">
+{
+   Code block
+}</pre></devsite-code>
+                    '''<p></p>
+                </td>
+                <td colspan="1" rowspan="1"><p>&lt;pre&gt;<br>
+                    {<br>
+                    &nbsp; &nbsp; 代码块<br>
+                    }<br>
+                    &lt;/pre&gt;</p>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="1" rowspan="1">
+                    <p>块引用</p>
+                </td>
+                <td colspan="1" rowspan="1">
+                    <p>&gt; 这是含多行<br>
+                        &gt; 块引用。</p>
+                </td>
+                <td colspan="1" rowspan="1">
+                    <p>&lt;blockquote&gt;<br>
+                        这是含多行 <br>
+                        的块引用。<br>
+                        &lt;/blockquote&gt;</p>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="1" rowspan="1">
+                    <p>居中</p>
+                </td>
+                <td colspan="1" rowspan="1">
+                    <p>无</p>
+                </td>
+                <td colspan="1" rowspan="1">
+                    <p>&lt;p style="text-align:center" &gt;居中文本&lt;/p&gt;</p>
+                </td>
+            </tr>
+            </tbody>
+</table>
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://jokwei.github.io/2021/08/04/New-Test-Post/" data-id="ckrxhtxcr0000zglqhfuzejkf" data-title="New Test Post" class="article-share-link">Share</a>
+      <a data-url="http://jokwei.github.io/2021/08/11/md-grammar-reference/" data-id="cks7hsfp0000580lq9nlgdsjt" data-title="md-grammar-reference" class="article-share-link">Share</a>
       
       
       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Markdown/" rel="tag">Markdown</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-how-to-setup-redis3-2-cluster" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2021/08/11/how-to-setup-redis3-2-cluster/" class="article-date">
+  <time class="dt-published" datetime="2021-08-11T06:18:34.000Z" itemprop="datePublished">2021-08-11</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2021/08/11/how-to-setup-redis3-2-cluster/">how-to-setup-redis3.2-cluster</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>文中将从手动搭建、脚本自动搭建两种情况进行介绍，可按需选择阅读</p>
+<h2 id="手动搭建"><a href="#手动搭建" class="headerlink" title="手动搭建"></a>手动搭建</h2><h3 id="节点准备"><a href="#节点准备" class="headerlink" title="节点准备"></a>节点准备</h3><p>编写配置文件，启动节点<br>集群目录建议：conf、log、data<br>节点配置文件命名建议：redis-[port].conf<br>要求：至少有六个节点，三主三从才能较好的实现redis集群功能，示例中为6381~6386</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">touch redis-6381.conf ...</span><br><span class="line">vim redis-6381.conf</span><br><span class="line"><span class="meta">#</span><span class="bash"> ...</span></span><br><span class="line"></span><br><span class="line">redis-server redis-6381.conf</span><br><span class="line">redis-server redis-6382.conf</span><br><span class="line">redis-server redis-6383.conf</span><br><span class="line">redis-server redis-6384.conf</span><br><span class="line">redis-server redis-6385.conf</span><br><span class="line">redis-server redis-6386.conf</span><br></pre></td></tr></table></figure>
+
+<p>配置文件示例：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 节点端口</span></span><br><span class="line">port 6381</span><br><span class="line"><span class="meta">#</span><span class="bash"> 后台模式运行</span></span><br><span class="line">daemonize yes</span><br><span class="line"><span class="meta">#</span><span class="bash"> ip保护模式（只有<span class="built_in">bind</span>的ip才能访问redis），集群下为no</span></span><br><span class="line">protected-mode no</span><br><span class="line"><span class="meta">#</span><span class="bash"> 密码</span></span><br><span class="line">requirepass [xxx]</span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta">#</span><span class="bash"> 日志文件</span></span><br><span class="line">dir /[path]/redis/</span><br><span class="line">logfile ./log/redis-6381.log</span><br><span class="line">loglevel notice</span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta">#</span><span class="bash"> 空闲连接多久后关闭</span></span><br><span class="line">timeout 1800</span><br><span class="line"><span class="meta">#</span><span class="bash"> 没有通信是不向客户端发送TCP ACK检测客户端是否关闭，由客户端做空闲检测</span></span><br><span class="line">tcp-keepalive 0</span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta">#</span><span class="bash"> 最大内存</span></span><br><span class="line">maxmemory 6gb</span><br><span class="line"><span class="meta">#</span><span class="bash"> 回收策略</span></span><br><span class="line">maxmemory-policy volatile-lru</span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta">#</span><span class="bash"> rdb文件名</span></span><br><span class="line">dbfilename redis-6381.rdb</span><br><span class="line"><span class="meta">#</span><span class="bash"> rdb文件压缩</span></span><br><span class="line">rdbcompression yes  </span><br><span class="line"><span class="meta">#</span><span class="bash"> bgsave错误的时候停止写操作来保证bgsave成功</span></span><br><span class="line">stop-writes-on-bgsave-error yes</span><br><span class="line"><span class="meta">#</span><span class="bash"> 检测rdb文件的完整性</span></span><br><span class="line">rdbchecksum yes</span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta">#</span><span class="bash"> 开启aof，主节点关闭，从节点打开</span></span><br><span class="line">appendonly yes</span><br><span class="line"><span class="meta">#</span><span class="bash"> aof刷盘策略</span></span><br><span class="line">appendfsync everysec</span><br><span class="line"><span class="meta">#</span><span class="bash"> aof重写大小</span></span><br><span class="line">auto-aof-rewrite-min-size 64mb</span><br><span class="line"><span class="meta">#</span><span class="bash"> aof增长率</span></span><br><span class="line">auto-aof-rewrite-percentage 100</span><br><span class="line"><span class="meta">#</span><span class="bash"> aof重写时是否进行正常aof</span></span><br><span class="line">no-appendfsync-on-rewrite yes</span><br><span class="line"><span class="meta">#</span><span class="bash"> aof文件名</span></span><br><span class="line">appendfilename redis-6381.aof</span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta">#</span><span class="bash"> 开启集群模式</span></span><br><span class="line">cluster-enabled yes</span><br><span class="line"><span class="meta">#</span><span class="bash"> 节点超时时间，单位毫秒</span></span><br><span class="line">cluster-node-timeout 15000</span><br><span class="line"><span class="meta">#</span><span class="bash"> 集群内部配置文件</span></span><br><span class="line">cluster-config-file &quot;nodes-6381.conf&quot;</span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta">#</span><span class="bash"> 慢查询队列长度</span></span><br><span class="line">slowlog-max-len 1000</span><br><span class="line"><span class="meta">#</span><span class="bash"> 多长时间为慢查询，单位微秒</span></span><br><span class="line">slowlog-log-slower-than 1000</span><br></pre></td></tr></table></figure>
+
+<h3 id="节点握手"><a href="#节点握手" class="headerlink" title="节点握手"></a>节点握手</h3><p>仅在一处redis客户端中执行握手消息即可，gossip消息会同步所有集群节点</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> redis-cli 客户端内执行</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> 握手</span></span><br><span class="line">cluster meet [ip] [port]</span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta">#</span><span class="bash"> 查看全部节点</span></span><br><span class="line">cluster nodes</span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta">#</span><span class="bash"> 查看集群状态</span></span><br><span class="line">cluster info</span><br></pre></td></tr></table></figure>
+
+<p>集群全部节点握手成功后查看集群状态 cluster_state: false ，等待数据槽分配完毕后才可以上线</p>
+<h3 id="分配数据槽"><a href="#分配数据槽" class="headerlink" title="分配数据槽"></a>分配数据槽</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 数据槽分配</span></span><br><span class="line">redis-cli -h [host] -p [port] cluster addslots &#123;start_num..end_num&#125;</span><br><span class="line">redis-cli -h 127.0.0.1 -p 6381 cluster addslots &#123;0..5461&#125;</span><br><span class="line">redis-cli -h 127.0.0.1 -p 6382 cluster addslots &#123;5462..10922&#125;</span><br><span class="line">redis-cli -h 127.0.0.1 -p 6383 cluster addslots &#123;10923..16383&#125;</span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta">#</span><span class="bash"> 查看全部节点数据槽分配情况</span></span><br><span class="line">cluster nodes</span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta">#</span><span class="bash"> 在从节点执行命令，指定主节点nodeId进行复制</span></span><br><span class="line">cluster replicate nodeId</span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta">#</span><span class="bash"> 查看集群状态</span></span><br><span class="line">cluster info</span><br></pre></td></tr></table></figure>
+
+<p>集群全部数据槽分配成功后查看集群状态 cluster_state: ok</p>
+<h2 id="自动搭建"><a href="#自动搭建" class="headerlink" title="自动搭建"></a>自动搭建</h2><h3 id="Ruby环境准备"><a href="#Ruby环境准备" class="headerlink" title="Ruby环境准备"></a>Ruby环境准备</h3><p>参见安装插件redis-trib.rb</p>
+<h3 id="节点准备-1"><a href="#节点准备-1" class="headerlink" title="节点准备"></a>节点准备</h3><h3 id="创建集群"><a href="#创建集群" class="headerlink" title="创建集群"></a>创建集群</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">redis-trib.rb create --replicas 1 127.0.0.1:6481 127.0.0.1:6482 127.0.0.1:6483 127.0.0.1:6484 127.0.0.1:6485 127.0.0.1:6486</span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta">#</span><span class="bash"> SYS - Can I <span class="built_in">set</span> the above configuration (<span class="built_in">type</span> <span class="string">&#x27;yes&#x27;</span> to accept):</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> after enter yes</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> SYS - [OK] All 16384 slots covered.</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> means finish</span></span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta">#</span><span class="bash"> 检查节点是否分配完毕</span></span><br><span class="line">redis-trib.rb check 127.0.0.1:6481</span><br><span class="line">redis-trib.rb check 127.0.0.1:6486</span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta">#</span><span class="bash"> [OK] All nodes agree about slots configuration.</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> &gt;&gt;&gt; Check <span class="keyword">for</span> open slots...</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> &gt;&gt;&gt; Check slots coverage...</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> [OK] All 16384 slots covered.</span></span><br></pre></td></tr></table></figure>
+
+<p>replicas 参数指定每个主节点分配几个从节点，此处为1个。<br>创建过程中，若使用节点为多ip下节点，redis-trib.rb会针对Redis节点进行重排序，尽量使主从节点分布在不同主机，保证可用性。因此cluster nodes的顺序会发生改变。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://jokwei.github.io/2021/08/11/how-to-setup-redis3-2-cluster/" data-id="cks7hsfoy000380lqekl2gaza" data-title="how-to-setup-redis3.2-cluster" class="article-share-link">Share</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Redis-Cluster/" rel="tag">Redis Cluster</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Skill/" rel="tag">Skill</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-centos7-install-plugin-redis-trib" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2021/08/11/centos7-install-plugin-redis-trib/" class="article-date">
+  <time class="dt-published" datetime="2021-08-11T06:00:47.000Z" itemprop="datePublished">2021-08-11</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2021/08/11/centos7-install-plugin-redis-trib/">centos7-install-plugin-redis-trib</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>引入redis-trib.rb，解决Redis集群手动部署复杂的问题</p>
+<h2 id="环境"><a href="#环境" class="headerlink" title="环境"></a>环境</h2><p>CentOS: 7<br>redis: 3.2.8<br>Ruby: 3.0.2<br>gem: 3.2.2<br>redis-trib.rb: </p>
+<h2 id="安装步骤"><a href="#安装步骤" class="headerlink" title="安装步骤"></a>安装步骤</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 按需安装openssl-devel，没有的情况会产生错误如下</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> Unable to require openssl, install OpenSSL and rebuild ruby (preferred) or use non-HTTPS sources</span></span><br><span class="line">yum install openssl-devel</span><br><span class="line">yum list installed openssl-devel | grep &quot;openssl-devel&quot;</span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta">#</span><span class="bash"> 下载ruby-3.0.2</span></span><br><span class="line">cd /usr/local/</span><br><span class="line">wget https://cache.ruby-lang.org/pub/ruby/3.0/ruby-3.0.2.tar.gz</span><br><span class="line">tar xvf ruby-3.0.2.tar.gz</span><br><span class="line">cd ruby-3.0.2/</span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta">#</span><span class="bash"> 配置安装</span></span><br><span class="line">./configure --with-openssl-dir=/usr/bin -prefix=/usr/local/ruby</span><br><span class="line">make</span><br><span class="line">make install</span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta">#</span><span class="bash"> 移动ruby、gem到全局命令集</span></span><br><span class="line">cd ruby</span><br><span class="line">cp bin/ruby /usr/local/bin/</span><br><span class="line">cp bin/gem /usr/local/bin/</span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta">#</span><span class="bash"> gem安装redis</span></span><br><span class="line">gem source -a https://rubygems.org/</span><br><span class="line">gem install redis</span><br><span class="line">gem list</span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta">#</span><span class="bash"> 移动redis-trib.rb到全局命令集</span></span><br><span class="line">cp /usr/local/redis-3.2.8/src/redis-trib.rb /usr/local/bin</span><br><span class="line"><span class="meta">#</span><span class="bash"> 检查是否可运行</span></span><br><span class="line">redis-trib.rb</span><br></pre></td></tr></table></figure>
+
+<h2 id="redis-trib-rb使用方法"><a href="#redis-trib-rb使用方法" class="headerlink" title="redis-trib.rb使用方法"></a>redis-trib.rb使用方法</h2>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://jokwei.github.io/2021/08/11/centos7-install-plugin-redis-trib/" data-id="cks7hsfon000080lq3os2ezwx" data-title="centos7-install-plugin-redis-trib" class="article-share-link">Share</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CentOS7/" rel="tag">CentOS7</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Plugin/" rel="tag">Plugin</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Redis/" rel="tag">Redis</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-centos7-install-redis" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2021/08/11/centos7-install-redis/" class="article-date">
+  <time class="dt-published" datetime="2021-08-11T05:59:03.000Z" itemprop="datePublished">2021-08-11</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2021/08/11/centos7-install-redis/">centos7-install-redis</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h2 id="环境"><a href="#环境" class="headerlink" title="环境"></a>环境</h2><p>CentOS: 7<br>redis: 3.2.8</p>
+<h2 id="步骤"><a href="#步骤" class="headerlink" title="步骤"></a>步骤</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">cd /usr/local</span><br><span class="line">wget https://download.redis.io/releases/redis-3.2.8.tar.gz</span><br><span class="line">tar xzf redis-3.2.8.tar.g</span><br><span class="line"></span><br><span class="line">cd redis-3.2.8/</span><br><span class="line">make</span><br><span class="line">make install</span><br><span class="line"></span><br><span class="line">redis-cli --version</span><br></pre></td></tr></table></figure>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://jokwei.github.io/2021/08/11/centos7-install-redis/" data-id="cks7hsfou000180lqffef3jum" data-title="centos7-install-redis" class="article-share-link">Share</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CentOS7/" rel="tag">CentOS7</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Redis/" rel="tag">Redis</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-linux-user-and-group-manage-md" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2021/08/10/linux-user-and-group-manage-md/" class="article-date">
+  <time class="dt-published" datetime="2021-08-10T08:04:57.000Z" itemprop="datePublished">2021-08-10</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2021/08/10/linux-user-and-group-manage-md/">linux-user-and-group-manage</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>记录常见Linux用户管理、用户组管理及批量生成用户命令，待完善Linux用户系统文件部分及相关哲学思考。</p>
+<h2 id="环境"><a href="#环境" class="headerlink" title="环境"></a>环境</h2><p>CentOS 7.0</p>
+<h2 id="常规用户操作"><a href="#常规用户操作" class="headerlink" title="常规用户操作"></a>常规用户操作</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 添加新用户</span></span><br><span class="line">useradd [选项] username</span><br><span class="line"><span class="meta">#</span><span class="bash"> comment 指定一段注释性描述</span></span><br><span class="line">useradd -c comment username </span><br><span class="line"><span class="meta">#</span><span class="bash"> dir 指定用户主目录，如果此目录不存在，则同时使用-m选项，可以创建主目录</span></span><br><span class="line">useradd -d dirname username  </span><br><span class="line"><span class="meta">#</span><span class="bash"> group 指定用户所属的用户组</span></span><br><span class="line">useradd -g groupid username  </span><br><span class="line"><span class="meta">#</span><span class="bash"> Group，用户组 指定用户所属的附加组</span></span><br><span class="line">useradd -G groupid username  </span><br><span class="line"><span class="meta">#</span><span class="bash"> Shell文件 指定用户的登录Shell</span></span><br><span class="line">useradd -s shellpath username  </span><br><span class="line"><span class="meta">#</span><span class="bash"> uid 指定用户的用户号，如果同时有-o选项，则可以重复使用其他用户的标识号</span></span><br><span class="line">useradd -u uid username  </span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta">#</span><span class="bash"> 删除用户</span></span><br><span class="line">userdel [选项] username</span><br><span class="line"><span class="meta">#</span><span class="bash"> remove 把用户的主目录一起删除</span></span><br><span class="line">userdel -r username </span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta">#</span><span class="bash"> 修改用户</span></span><br><span class="line">usermod [选项] username</span><br><span class="line"><span class="meta">#</span><span class="bash"> 常用选项-c, -d, -m, -g, -G, -s, -u以及-o等 用法等同创建用户</span></span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta">#</span><span class="bash"> 修改密码</span></span><br><span class="line">passwd [选项] username</span><br><span class="line"><span class="meta">#</span><span class="bash"> lock 锁定口令，即禁用账号</span></span><br><span class="line">passwd -l username </span><br><span class="line"><span class="meta">#</span><span class="bash"> unlock 口令解锁</span></span><br><span class="line">passwd -u username </span><br><span class="line"><span class="meta">#</span><span class="bash"> del 使账号无口令</span></span><br><span class="line">passwd -d username </span><br><span class="line"><span class="meta">#</span><span class="bash"> force 强迫用户下次登录时修改口令</span></span><br><span class="line">passwd -f username </span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h2 id="用户组操作"><a href="#用户组操作" class="headerlink" title="用户组操作"></a>用户组操作</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 添加用户组</span></span><br><span class="line">groupadd [选项] groupname</span><br><span class="line"><span class="meta">#</span><span class="bash"> 指定新用户组的组标识号（GID）</span></span><br><span class="line">groupadd -g GID groupname     </span><br><span class="line"><span class="meta">#</span><span class="bash"> 一般与-g选项同时使用，表示新用户组的GID可以与系统已有用户组的GID相同</span></span><br><span class="line">groupadd -o groupname </span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta">#</span><span class="bash"> 删除用户组</span></span><br><span class="line">groupdel groupname</span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta">#</span><span class="bash"> 修改用户组</span></span><br><span class="line">groupmod [选项] groupname</span><br><span class="line"><span class="meta">#</span><span class="bash"> 为用户组指定新的组标识号。</span></span><br><span class="line">groupmod -g GID groupname </span><br><span class="line"><span class="meta">#</span><span class="bash"> 与-g选项同时使用，用户组的新GID可以与系统已有用户组的GID相同。</span></span><br><span class="line">groupmod -o groupname </span><br><span class="line"><span class="meta">#</span><span class="bash"> 新用户组 将用户组的名字改为新名字</span></span><br><span class="line">groupmod -n groupname</span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta">#</span><span class="bash"> 切换不同用户组身份</span></span><br><span class="line">newgrp target_group_name </span><br></pre></td></tr></table></figure>
+
+<h2 id="批量添加用户组操作"><a href="#批量添加用户组操作" class="headerlink" title="批量添加用户组操作"></a>批量添加用户组操作</h2><ol>
+<li>编写用户文件user.txt</li>
+</ol>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 格式完全等价/etc/passwd文件</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> 用户名:口令:用户标识号:组标识号:注释性描述:主目录:登录Shell</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> username:[passwd]:uid:gid:comment:dir:shell_path</span></span><br><span class="line">user_a::100:9::/home/user_a:/bin/bash</span><br><span class="line">user_b::101:9::/home/user_b:/bin/bash</span><br><span class="line">user_c::102:9::/home/user_c:/bin/bash</span><br><span class="line">user_d::103:9::/home/user_d:/bin/bash</span><br><span class="line">user_e::104:9::/home/user_e:/bin/bash</span><br><span class="line">user_f::105:9::/home/user_f:/bin/bash</span><br></pre></td></tr></table></figure>
+
+<ol start="2">
+<li><p>以root身份执行命令 /usr/sbin/newusers，从刚创建的用户文件user.txt中导入数据，创建用户</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">newusers &lt; user.txt</span><br></pre></td></tr></table></figure></li>
+<li><p>执行命令/usr/sbin/pwunconv。</p>
+</li>
+</ol>
+<p>将 /etc/shadow 产生的 shadow 密码解码，然后回写到 /etc/passwd 中，并将/etc/shadow的shadow密码栏删掉。这是为了方便下一步的密码转换工作，即先取消 shadow password 功能。</p>
+<ol start="4">
+<li>编写密码文件passwd.txt</li>
+</ol>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">user_a:123456</span><br><span class="line">user_b:123456</span><br><span class="line">user_c:123456</span><br><span class="line">user_d:123456</span><br><span class="line">user_e:123456</span><br><span class="line">user_f:123456</span><br></pre></td></tr></table></figure>
+
+<ol start="5">
+<li>以 root 身份执行命令 /usr/sbin/chpasswd</li>
+</ol>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">chpasswd &lt; passwd.txt</span><br></pre></td></tr></table></figure>
+
+<ol start="6">
+<li>确定密码经编码写入/etc/passwd的密码栏后</li>
+</ol>
+<p>执行命令 /usr/sbin/pwconv 将密码编码为 shadow password，并将结果写入 /etc/shadow。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pwconv</span><br></pre></td></tr></table></figure>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://jokwei.github.io/2021/08/10/linux-user-and-group-manage-md/" data-id="cks7hsfp2000780lqgih2a73y" data-title="linux-user-and-group-manage" class="article-share-link">Share</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Linux/" rel="tag">Linux</a></li></ul>
+
     </footer>
   </div>
   
@@ -155,7 +643,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://jokwei.github.io/2021/08/04/hello-world/" data-id="ckrxaq6ma0000rslqhw0whv3z" data-title="Hello World" class="article-share-link">Share</a>
+      <a data-url="http://jokwei.github.io/2021/08/04/hello-world/" data-id="cks7hsfoz000480lqam5vb1pv" data-title="Hello World" class="article-share-link">Share</a>
       
       
       
@@ -177,9 +665,23 @@
 
   
     
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/CentOS7/" rel="tag">CentOS7</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Linux/" rel="tag">Linux</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Markdown/" rel="tag">Markdown</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Plugin/" rel="tag">Plugin</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Redis/" rel="tag">Redis</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Redis-Cluster/" rel="tag">Redis Cluster</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Skill/" rel="tag">Skill</a></li></ul>
+    </div>
+  </div>
+
 
   
     
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/CentOS7/" style="font-size: 20px;">CentOS7</a> <a href="/tags/Linux/" style="font-size: 10px;">Linux</a> <a href="/tags/Markdown/" style="font-size: 10px;">Markdown</a> <a href="/tags/Plugin/" style="font-size: 10px;">Plugin</a> <a href="/tags/Redis/" style="font-size: 20px;">Redis</a> <a href="/tags/Redis-Cluster/" style="font-size: 10px;">Redis Cluster</a> <a href="/tags/Skill/" style="font-size: 10px;">Skill</a>
+    </div>
+  </div>
+
   
     
   <div class="widget-wrap">
@@ -198,11 +700,23 @@
       <ul>
         
           <li>
-            <a href="/2021/08/04/New-Test-Post/">New Test Post</a>
+            <a href="/2021/08/11/md-grammar-reference/">md-grammar-reference</a>
           </li>
         
           <li>
-            <a href="/2021/08/04/hello-world/">Hello World</a>
+            <a href="/2021/08/11/how-to-setup-redis3-2-cluster/">how-to-setup-redis3.2-cluster</a>
+          </li>
+        
+          <li>
+            <a href="/2021/08/11/centos7-install-plugin-redis-trib/">centos7-install-plugin-redis-trib</a>
+          </li>
+        
+          <li>
+            <a href="/2021/08/11/centos7-install-redis/">centos7-install-redis</a>
+          </li>
+        
+          <li>
+            <a href="/2021/08/10/linux-user-and-group-manage-md/">linux-user-and-group-manage</a>
           </li>
         
       </ul>

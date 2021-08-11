@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>linux-user-and-group-manage | Jo Blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="记录常见Linux用户管理、用户组管理及批量生成用户命令，待完善Linux用户系统文件部分及相关哲学思考。 环境CentOS 7.0 常规用户操作1234567891011121314151617181920212223242526272829303132333435# 添加新用户useradd [选项] username# comment 指定一段注释性描述useradd -c comment">
+<meta property="og:type" content="article">
+<meta property="og:title" content="linux-user-and-group-manage">
+<meta property="og:url" content="http://jokwei.github.io/2021/08/10/linux-user-and-group-manage-md/index.html">
+<meta property="og:site_name" content="Jo Blog">
+<meta property="og:description" content="记录常见Linux用户管理、用户组管理及批量生成用户命令，待完善Linux用户系统文件部分及相关哲学思考。 环境CentOS 7.0 常规用户操作1234567891011121314151617181920212223242526272829303132333435# 添加新用户useradd [选项] username# comment 指定一段注释性描述useradd -c comment">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2021-08-10T08:04:57.000Z">
+<meta property="article:modified_time" content="2021-08-11T06:33:46.442Z">
+<meta property="article:author" content="Jo">
+<meta property="article:tag" content="Linux">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="Jo Blog" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
+
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Jo Blog</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">小熊酱的日志</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://jokwei.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-linux-user-and-group-manage-md" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2021/08/10/linux-user-and-group-manage-md/" class="article-date">
+  <time class="dt-published" datetime="2021-08-10T08:04:57.000Z" itemprop="datePublished">2021-08-10</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="p-name article-title" itemprop="headline name">
+      linux-user-and-group-manage
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>记录常见Linux用户管理、用户组管理及批量生成用户命令，待完善Linux用户系统文件部分及相关哲学思考。</p>
+<h2 id="环境"><a href="#环境" class="headerlink" title="环境"></a>环境</h2><p>CentOS 7.0</p>
+<h2 id="常规用户操作"><a href="#常规用户操作" class="headerlink" title="常规用户操作"></a>常规用户操作</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 添加新用户</span></span><br><span class="line">useradd [选项] username</span><br><span class="line"><span class="meta">#</span><span class="bash"> comment 指定一段注释性描述</span></span><br><span class="line">useradd -c comment username </span><br><span class="line"><span class="meta">#</span><span class="bash"> dir 指定用户主目录，如果此目录不存在，则同时使用-m选项，可以创建主目录</span></span><br><span class="line">useradd -d dirname username  </span><br><span class="line"><span class="meta">#</span><span class="bash"> group 指定用户所属的用户组</span></span><br><span class="line">useradd -g groupid username  </span><br><span class="line"><span class="meta">#</span><span class="bash"> Group，用户组 指定用户所属的附加组</span></span><br><span class="line">useradd -G groupid username  </span><br><span class="line"><span class="meta">#</span><span class="bash"> Shell文件 指定用户的登录Shell</span></span><br><span class="line">useradd -s shellpath username  </span><br><span class="line"><span class="meta">#</span><span class="bash"> uid 指定用户的用户号，如果同时有-o选项，则可以重复使用其他用户的标识号</span></span><br><span class="line">useradd -u uid username  </span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta">#</span><span class="bash"> 删除用户</span></span><br><span class="line">userdel [选项] username</span><br><span class="line"><span class="meta">#</span><span class="bash"> remove 把用户的主目录一起删除</span></span><br><span class="line">userdel -r username </span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta">#</span><span class="bash"> 修改用户</span></span><br><span class="line">usermod [选项] username</span><br><span class="line"><span class="meta">#</span><span class="bash"> 常用选项-c, -d, -m, -g, -G, -s, -u以及-o等 用法等同创建用户</span></span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta">#</span><span class="bash"> 修改密码</span></span><br><span class="line">passwd [选项] username</span><br><span class="line"><span class="meta">#</span><span class="bash"> lock 锁定口令，即禁用账号</span></span><br><span class="line">passwd -l username </span><br><span class="line"><span class="meta">#</span><span class="bash"> unlock 口令解锁</span></span><br><span class="line">passwd -u username </span><br><span class="line"><span class="meta">#</span><span class="bash"> del 使账号无口令</span></span><br><span class="line">passwd -d username </span><br><span class="line"><span class="meta">#</span><span class="bash"> force 强迫用户下次登录时修改口令</span></span><br><span class="line">passwd -f username </span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h2 id="用户组操作"><a href="#用户组操作" class="headerlink" title="用户组操作"></a>用户组操作</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 添加用户组</span></span><br><span class="line">groupadd [选项] groupname</span><br><span class="line"><span class="meta">#</span><span class="bash"> 指定新用户组的组标识号（GID）</span></span><br><span class="line">groupadd -g GID groupname     </span><br><span class="line"><span class="meta">#</span><span class="bash"> 一般与-g选项同时使用，表示新用户组的GID可以与系统已有用户组的GID相同</span></span><br><span class="line">groupadd -o groupname </span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta">#</span><span class="bash"> 删除用户组</span></span><br><span class="line">groupdel groupname</span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta">#</span><span class="bash"> 修改用户组</span></span><br><span class="line">groupmod [选项] groupname</span><br><span class="line"><span class="meta">#</span><span class="bash"> 为用户组指定新的组标识号。</span></span><br><span class="line">groupmod -g GID groupname </span><br><span class="line"><span class="meta">#</span><span class="bash"> 与-g选项同时使用，用户组的新GID可以与系统已有用户组的GID相同。</span></span><br><span class="line">groupmod -o groupname </span><br><span class="line"><span class="meta">#</span><span class="bash"> 新用户组 将用户组的名字改为新名字</span></span><br><span class="line">groupmod -n groupname</span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta">#</span><span class="bash"> 切换不同用户组身份</span></span><br><span class="line">newgrp target_group_name </span><br></pre></td></tr></table></figure>
+
+<h2 id="批量添加用户组操作"><a href="#批量添加用户组操作" class="headerlink" title="批量添加用户组操作"></a>批量添加用户组操作</h2><ol>
+<li>编写用户文件user.txt</li>
+</ol>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 格式完全等价/etc/passwd文件</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> 用户名:口令:用户标识号:组标识号:注释性描述:主目录:登录Shell</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> username:[passwd]:uid:gid:comment:dir:shell_path</span></span><br><span class="line">user_a::100:9::/home/user_a:/bin/bash</span><br><span class="line">user_b::101:9::/home/user_b:/bin/bash</span><br><span class="line">user_c::102:9::/home/user_c:/bin/bash</span><br><span class="line">user_d::103:9::/home/user_d:/bin/bash</span><br><span class="line">user_e::104:9::/home/user_e:/bin/bash</span><br><span class="line">user_f::105:9::/home/user_f:/bin/bash</span><br></pre></td></tr></table></figure>
+
+<ol start="2">
+<li><p>以root身份执行命令 /usr/sbin/newusers，从刚创建的用户文件user.txt中导入数据，创建用户</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">newusers &lt; user.txt</span><br></pre></td></tr></table></figure></li>
+<li><p>执行命令/usr/sbin/pwunconv。</p>
+</li>
+</ol>
+<p>将 /etc/shadow 产生的 shadow 密码解码，然后回写到 /etc/passwd 中，并将/etc/shadow的shadow密码栏删掉。这是为了方便下一步的密码转换工作，即先取消 shadow password 功能。</p>
+<ol start="4">
+<li>编写密码文件passwd.txt</li>
+</ol>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">user_a:123456</span><br><span class="line">user_b:123456</span><br><span class="line">user_c:123456</span><br><span class="line">user_d:123456</span><br><span class="line">user_e:123456</span><br><span class="line">user_f:123456</span><br></pre></td></tr></table></figure>
+
+<ol start="5">
+<li>以 root 身份执行命令 /usr/sbin/chpasswd</li>
+</ol>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">chpasswd &lt; passwd.txt</span><br></pre></td></tr></table></figure>
+
+<ol start="6">
+<li>确定密码经编码写入/etc/passwd的密码栏后</li>
+</ol>
+<p>执行命令 /usr/sbin/pwconv 将密码编码为 shadow password，并将结果写入 /etc/shadow。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pwconv</span><br></pre></td></tr></table></figure>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://jokwei.github.io/2021/08/10/linux-user-and-group-manage-md/" data-id="cks7hsfp2000780lqgih2a73y" data-title="linux-user-and-group-manage" class="article-share-link">Share</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Linux/" rel="tag">Linux</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2021/08/11/centos7-install-redis/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          centos7-install-redis
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2021/08/04/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Hello World</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/CentOS7/" rel="tag">CentOS7</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Linux/" rel="tag">Linux</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Markdown/" rel="tag">Markdown</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Plugin/" rel="tag">Plugin</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Redis/" rel="tag">Redis</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Redis-Cluster/" rel="tag">Redis Cluster</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Skill/" rel="tag">Skill</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/CentOS7/" style="font-size: 20px;">CentOS7</a> <a href="/tags/Linux/" style="font-size: 10px;">Linux</a> <a href="/tags/Markdown/" style="font-size: 10px;">Markdown</a> <a href="/tags/Plugin/" style="font-size: 10px;">Plugin</a> <a href="/tags/Redis/" style="font-size: 20px;">Redis</a> <a href="/tags/Redis-Cluster/" style="font-size: 10px;">Redis Cluster</a> <a href="/tags/Skill/" style="font-size: 10px;">Skill</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/08/">August 2021</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2021/08/11/md-grammar-reference/">md-grammar-reference</a>
+          </li>
+        
+          <li>
+            <a href="/2021/08/11/how-to-setup-redis3-2-cluster/">how-to-setup-redis3.2-cluster</a>
+          </li>
+        
+          <li>
+            <a href="/2021/08/11/centos7-install-plugin-redis-trib/">centos7-install-plugin-redis-trib</a>
+          </li>
+        
+          <li>
+            <a href="/2021/08/11/centos7-install-redis/">centos7-install-redis</a>
+          </li>
+        
+          <li>
+            <a href="/2021/08/10/linux-user-and-group-manage-md/">linux-user-and-group-manage</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2021 Jo<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.4.1.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>
